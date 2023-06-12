@@ -1,0 +1,691 @@
+:root {
+  --menu-speed: 0.75s;
+}
+
+a {
+color: black;
+text-decoration: none;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+img{
+  display: block;
+}
+
+.header{
+  text-align: center;
+  color:black;
+  padding-top: 20px;
+  }
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  font-family: 'Helvetica', Sans-serif;
+  }
+
+  h4{
+    font-family: Avenir Next Condensed;
+    font-size: 18px;
+    font-style: italic;
+  }
+
+  h3{
+    font-family: Avenir Next Condensed;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 12px;
+  }
+
+  h2{
+    font-family: Avenir Next condensed;
+    font-size: 20px;
+    font-weight: regular;
+    color: darkgray;
+  }
+
+  p{
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  .button {
+    background-color: #e84e1e;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: Avenir Next condensed, sans-serif;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .buybutton{
+    font-family: Avenir next condensed;
+    background-color: black;
+    color: #e84e1e; 
+    padding-top: 2px; 
+    padding-bottom: 2px; 
+    border-style: solid 2px;
+    border-color: #e84e1e;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .buybutton:hover{
+    background-color: #46180a;
+  }
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+  }
+
+.icon{
+    width: 25px;
+}
+
+h1{
+  font-family: Iowan Old Style;
+  font-weight: lighter;
+  font-size: 46px;
+  margin-bottom: 0px;
+}
+
+
+
+/*BEGIN BASIC MENU STUFF*/
+#main-menu {
+display: block;
+height: 50px;
+width: 100%;
+margin: 0px;
+z-index: 9;
+}
+
+#main-menu ul {
+font-family: Avenir Next Condensed;
+max-width: 800px;
+min-width: 400px;
+width: 30%;
+height: 100%;
+margin: 0px auto;
+padding: 0px;
+display: flex;
+text-align: center;
+justify-content: space-between;
+/*align-items: center;*/
+z-index: 9;
+}
+
+#main-menu li {
+list-style-type: none;
+font-size: 2rem;
+}
+
+#main-menu a {
+color: black;
+font-size: 1.5rem;
+text-decoration: none;
+}
+
+#main-menu a:hover {
+color: #e84e1e;
+cursor: pointer;
+}
+/*END BASIC STUFF*/
+
+/*BEGIN BOIGA MENU STUFF*/
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  text-align: right;
+  display: none;
+}
+
+.menu-wrap .toggler{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 2;
+  /*text-align: right;*/
+  cursor: pointer;
+  width: 50px;
+  height: 45px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger{
+  position: absolute;
+  right: 24px;
+  z-index: 1;
+  width: 45px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*HAMBURGER LINE*/
+.menu-wrap .hamburger > div {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -13px;
+  width: 100%;
+  height: 3px;
+  background: inherit;
+}
+
+.menu-wrap .hamburger > div:after {
+  top: 13px;
+}
+
+/*TOGGLER ANIMATE*/
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+  background-color: white;
+}
+
+.menu-wrap .toggler:checked + .hamburger {
+  background: black;
+  transition: 0.1s;
+}
+
+/*GET THAT OVERLAY IN THERE*/
+.menu-wrap .toggler:checked ~ .overlay {
+ visibility: visible;
+ opacity: 0.4;
+}
+
+/*TURN LINES INTO X*/
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/*SHOW MENU*/
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+  right: 0;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+}
+
+
+/*SLIDE OUT MENU STYLE*/
+.menu-wrap .menu{
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  transition: 0.3s;
+  display: flex;
+  /*align-items: center;*/
+  /*justify-content: center;*/
+}
+/*The "> div" makes the div take the position in the blank div already made*/
+.menu-wrap .menu > div {
+  background: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: none;
+  /*align-items: center;*/
+  /*justify-content: center;*/
+}
+
+.menu-wrap .menu > div > div {
+  text-align: left;
+  opacity: 0;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: white;
+  padding: 1rem;
+  font-family: Avenir Next Condensed;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover {
+  color: #e84e1e;
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width: 600px) {
+    #main-menu {
+      display: none;
+    }
+    .menu-wrap {
+      display: inline;
+    }
+    .header{
+      padding-top: 0px;
+      position: fixed;
+      top: -5px;
+      text-align: left;
+      padding-left: 20px;
+      z-index: 2;
+    }
+
+  .headerbox{
+    display: inline;
+    z-index: 1;
+    background-color: white;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+  }
+  h1{
+    font-size: 36px;
+  }
+}
+
+/* Begin css for my created main page content*/
+    .choose {
+      padding-top: 30px;
+      padding-bottom: 15px;
+    }
+    .choose ul {
+      font-family: Avenir Next Condensed;
+      color: gray;
+      /*max-width: 600px;*/
+      /*min-width: 200px;*/
+      width: 200px;
+      height: 100%;
+      margin: 0px auto;
+      padding: 0px;
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 9;
+    }
+    .choose li {
+      list-style-type: none;
+      font-size: 1.25rem;
+    }
+    .choose li a {
+      text-decoration: none;
+    }
+    .choose a:hover{
+      text-decoration: none;
+      color: #e84e1e;
+    }
+
+    .socials{
+      display: flex;
+      flex-direction: row;
+      min-width: 80px;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .iccy{
+      display: flex;
+      width: 50%;
+      align-items: center;
+    }
+
+
+    .encompass{
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 6px;
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+
+
+    .aboutspace{
+      height: 50px;
+    }
+
+    .abouts{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      max-height: 100px;
+      justify-content: center;
+      margin-bottom: 80px;
+    }
+
+    .cover{
+        /*background-color: green;*/
+        display: flex;
+        flex-direction: row;
+        min-height: 100vh;
+        padding: 6px;
+        padding-left: 15%;
+        padding-right: 15%;
+      }
+      .aboutcover{
+          /*background-color: green;*/
+          display: flex;
+          flex-direction: row;
+          min-height: 100vh;
+        }
+
+
+    .column{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        min-height: 100%;
+      }
+
+    .column2{
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      min-height: 100%;
+      float:right;
+      }
+      .aboutcolumn{
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+          min-height: 100%;
+        }
+
+      .aboutcolumn2{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        min-height: 100%;
+        float:right;
+        padding-left: 30px;
+        }
+
+      .nextto{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .halfcolumn{
+        width: 50%;
+      }
+
+      .section{
+        padding: 5px;
+        box-sizing: border-box;
+        display: block;
+      }
+
+      .painting{
+          width: 100%;
+      }
+  /* End css for my created main page content*/
+
+  /* Begin css for modal*/
+      .rowModal > .columnModal {
+        padding: 0 8px;
+        }
+
+        .rowModal:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        .columnModal {
+        display: inline-block;
+        float: left;
+        width: 10%;
+        height: 100px;
+        }
+
+        .modalThumb{
+        display: block;
+        max-height:100px;
+        max-width: 100%;
+        margin: auto;
+        padding: 5%;
+        }
+    /* The Modal (background) */
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          padding-top: 30px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: black;
+          z-index: 5;
+        }
+
+        /* Modal Content */
+        .modal-content {
+          position: relative;
+          margin: auto;
+          padding: 0;
+          /*width: 60%;*/
+          max-width: 1200px;
+          z-index: 6;
+
+        }
+        /*THE MAIN IMAGE*/
+        .modimage{
+          display: block;
+         max-width: 60%;
+         max-height: 500px;
+         margin-left: auto;
+         margin-right: auto;
+        }
+        .modimage-container{
+          width: 100%;
+          height: 500px;
+          margin-left: auto;
+         margin-right: auto;
+        }
+        /*END MAIN IMAGE*/
+
+        /* The Close Button */
+        .close {
+          color: white;
+          position: absolute;
+          top: 10px;
+          right: 25px;
+          font-size: 35px;
+          font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: #999;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .mySlides {
+          display: none;
+        }
+
+        .cursor {
+          cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        .caption-container {
+          text-align: center;
+          background-color: black;
+          padding: 2px 16px;
+          color: white;
+        }
+        .demo {
+          opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+
+        img.hover-shadow {
+          transition: 0.3s;
+        }
+        img.hover-opacity{
+          transition: 0.3s;
+        }
+
+        .hover-opacity:hover {
+          opacity: .7;
+        }
+        .hover-shadow:hover {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    /* End css for modal*/
+
+        @media screen and (max-width: 600px) {
+          /* Begin css for my created main page content*/
+          .encompass{
+            padding-left: 50px;
+            padding-right: 50px;
+          }
+
+          .choose {
+            padding-top: 90px;
+            color: gray;
+          }
+          .choose ul{
+            width: 250px;
+          }
+          .choose li{
+            font-size: 1.5rem;
+          }
+          .aboutspace{
+            height: 80px;
+          }
+          .cover{
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-left: 6%;
+            padding-right: 6%;
+            padding-top:80px;
+          }
+          .column {
+            min-width: 100%;
+          }
+          .column2 {
+            min-width: 100%;
+          }
+       }
+
+      @media screen and (max-width: 1000px) {
+        .aboutcover{
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          top:130px;
+        }
+        .aboutcolumn {
+          min-width: 100%;
+        }
+        .aboutcolumn2 {
+          min-width: 100%;
+          padding-left: 0px;
+        }
+
+        }
+       /*End css for my created main page content*/
+
+        /*Contact page*/
+       .antispam { display:none;}

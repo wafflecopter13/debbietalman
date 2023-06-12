@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<meta name="Debbie Talman" content="width=device-width, initial-scale=1">
+<head>
+  <title>Home Page Paintings</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--<link rel="stylesheet" href="css/menu.css">-->
+</head>
+<body>
+  <div class ="headerbox"></div>
+  <div class="header">
+    <h1>Debbie Talman</h1>
+      <nav id="main-menu">
+          <ul>
+            <li><a href="index.html" style="color:#e84e1e;">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <div class="socials">
+                <div class="iccy">
+                  <a href="#"><img class="icon" src="images/instagram.png" alt="Instagram icon" onmouseover="this.src='images/instagramorange.png'" onmouseout="this.src='images/instagram.png'"></a>
+                </div>
+                <div class="iccy">
+                  <a href="#"><img class="icon" src="images/facebook.png" alt="Facebook icon" onmouseover="this.src='images/facebookorange.png'" onmouseout="this.src='images/facebook.png'"></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+    </div>
+
+<!--The hamburger menu-->
+  <div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+
+    <div class="hamburger">
+      <div>
+      </div>
+    </div>
+    <div class="menu">
+      <div>
+        <div>
+          <h3>Menu</h3>
+            <ul>
+              <li><a href="index.html">Portfolio</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </div>
+
+  <!--Begin code for main page content-->
+<!--
+  <div class="choose">
+    <ul>
+      <li><a href="#" style="color:#e84e1e;">Paintings</a></li>
+      <li><a href="photography.html">Photography</a></li>
+    </ul>
+  </div>
+-->
+  <div class="cover">
+
+    <div class="column">
+
+      <div class="nextto">
+        <div class="halfcolumn section" style="width: 49.7%;">
+  		    <img src="images/jellylicious.jpg" onclick="openModal();currentSlide(1)" class="painting hover-opacity cursor">
+        </div>
+        <div class="halfcolumn section" style="width: 50.3%;">
+          <img src="images/speaks.jpg" onclick="openModal();currentSlide(2)" class="painting hover-opacity cursor">
+        </div>
+      </div>
+
+      <div class="section">
+        <img src="images/flowers.jpg" onclick="openModal();currentSlide(3)" class="painting hover-opacity cursor">
+      </div>
+
+      <div class="nextto">
+        <div class="halfcolumn section" style="width: 50.1%;">
+          <img src="images/chick.jpg" onclick="openModal();currentSlide(4)" class="painting hover-opacity cursor">
+          <img src="images/peonies.jpg" onclick="openModal();currentSlide(5)" class="painting hover-opacity cursor" style="padding-top: 10px;">
+          <img src="images/redeyes.jpg" onclick="openModal();currentSlide(6)" class="painting hover-opacity cursor" style="padding-top: 10px;">
+        </div>
+        <div class="halfcolumn section" style="width: 49.9%;">
+          <img src="images/lich.JPG" onclick="openModal();currentSlide(7)" class="painting hover-opacity cursor">
+          <img src="images/beesgarden.JPG" onclick="openModal();currentSlide(8)" class="painting hover-opacity cursor" style="padding-top: 10px;">
+        </div>
+      </div>
+
+      <div class="section">
+        <img src="images/happy.jpg" onclick="openModal();currentSlide(9)" class="painting hover-opacity cursor">
+      </div>
+
+      <div class="nextto">
+        <div class="halfcolumn section" style="width: 62.9%;">
+          <img src="images/bees.jpg" onclick="openModal();currentSlide(10)" class="painting hover-opacity cursor">
+          <img src="images/sunflowers.jpg" onclick="openModal();currentSlide(11)" class="painting hover-opacity cursor" style="padding-top: 10px;">
+        </div>
+        <div class="halfcolumn section" style="width: 37.1%;">
+          <img src="images/lillies.jpg" onclick="openModal();currentSlide(12)" class="painting hover-opacity cursor">
+        </div>
+      </div>
+
+      <div class="section">
+    	   <img src="images/discus.jpg" onclick="openModal();currentSlide(13)" class="painting hover-opacity cursor">
+      </div>
+
+      <div class="nextto">
+        <div class="halfcolumn section" style="width: 50.3%;">
+  		    <img src="images/jelly.jpg" onclick="openModal();currentSlide(14)" class="painting hover-opacity cursor">
+        </div>
+        <div class="halfcolumn section" style="width: 49.7%;">
+          <img src="images/vase.jpg" onclick="openModal();currentSlide(15)" class="painting hover-opacity cursor">
+        </div>
+      </div>
+
+      <div class="section">
+        <img src="images/blue.jpg" onclick="openModal();currentSlide(16)" class="painting hover-opacity cursor">
+     </div>
+
+    </div>
+
+
+
+  	<div class="column2">
+
+      <div class="section">
+        <img src="images/sunflower.jpeg" onclick="openModal();currentSlide(17)" class="painting hover-opacity cursor">
+      </div>
+
+      <div class="nextto">
+        <div class="halfcolumn section" style="width: 45.4%;">
+  		    <img src="images/marsh.jpg" onclick="openModal();currentSlide(18)" class="painting hover-opacity cursor">
+          <img src="images/graffiti.jpg" onclick="openModal();currentSlide(19)" class="painting hover-opacity cursor" style="padding-top: 10px;">
+        </div>
+        <div class="halfcolumn section" style="width: 54.6%;">
+  		    <img src="images/fertility.jpg" onclick="openModal();currentSlide(20)" class="painting hover-opacity cursor">
+        </div>
+      </div>
+
+      <div class="section">
+        <img src="images/poppies.jpg" onclick="openModal();currentSlide(21)" class="painting hover-opacity cursor">
+      </div>
+
+      <div class="nextto">
+        <div class="halfcolumn section" style="width: 51.7%;">
+          <img src="images/moth.jpg" onclick="openModal();currentSlide(22)" class="painting hover-opacity cursor">
+        </div>
+        <div class="halfcolumn section" style="width: 48.3%;">
+          <img src="images/follows.JPG" onclick="openModal();currentSlide(23)" class="painting hover-opacity cursor">
+        </div>
+      </div>
+
+      <div class="section">
+        <img src="images/grouper.jpg" onclick="openModal();currentSlide(24)" class="painting hover-opacity cursor">
+      </div>
+
+      <div class="nextto">
+        <div class="halfcolumn section" style="width: 48.2%;">
+          <img src="images/moroccan.jpg" onclick="openModal();currentSlide(25)" class="painting hover-opacity cursor">
+        </div>
+        <div class="halfcolumn section" style="width: 51.8%;">
+          <img src="images/spirit.jpg" onclick="openModal();currentSlide(26)" class="painting hover-opacity cursor">
+        </div>
+      </div>
+
+      <div class="section">
+        <img src="images/irises.jpeg" onclick="openModal();currentSlide(27)" class="painting hover-opacity cursor">
+     </div>
+
+      <div class="section">
+        <img src="images/fish.jpg" onclick="openModal();currentSlide(28)" class="painting hover-opacity cursor">
+     </div>
+
+      <div class="nextto">
+        <div class="halfcolumn section" style="width: 47.8%;">
+  		    <img src="images/dragonfly.jpg" onclick="openModal();currentSlide(29)" class="painting hover-opacity cursor">
+        </div>
+        <div class="halfcolumn section" style="width: 52.2%;">
+  		    <img src="images/flamingo.jpg" onclick="openModal();currentSlide(30)" class="painting hover-opacity cursor">
+        </div>
+      </div>
+
+  	</div>
+    
+  </div>
+
+
+  <footer style="text-align: center; display: flex; flex-direction: column; font-family: Avenir Next condensed;">
+    <p>&#169; 2023 by Debbie Talman<br>
+    All rights reserved</p>
+  </footer>
+
+
+  <!--End code for the Main page content-->
+
+  <!--Begin html code for modal placement
+  Show Modal-->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+
+  	<!--display when focus on in modal-->
+  	<div class="modal-content">
+
+  <div class="modimage-container">
+
+      <div class="mySlides">
+        <div class="numbertext">1 / 30</div>
+        <h1 style="color: white; text-align: center;">Jellyicious</h1>
+        <p style="color: white; text-align: center;">20x10 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$300.00</h2>
+        <img src="images/jellylicious.jpg" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+  		</div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 30</div>
+        <h1 style="color: white; text-align: center;">Speaks To Me</h1>
+        <p style="color: white; text-align: center;">20x10 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$300.00</h2>
+        <img src="images/speaks.jpg" class="modimage">
+        <form target="_blank" action="https://www.shop4artwork.com/store/p3529/This_Speaks_to_Me_-_Acrylic_Painting_by_Debbie_Talman.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Artworks" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 30</div>
+        <h1 style="color: white; text-align: center;">Sun Flowers</h1>
+        <p style="color: white; text-align: center;">15x13 acrylic on wrapped canvas - framed</p>
+        <h2 style="color: white; text-align: center;">$175.00</h2>
+        <img src="images/flowers.jpg" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 30</div>
+        <h1 style="color: white; text-align: center;">Chick Of The Sea</h1>
+        <p style="color: white; text-align: center;">17x17 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$425.00</h2>
+        <img src="images/chickframed.jpg" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 30</div>
+        <h1 style="color: white; text-align: center;">Peonies</h1>
+        <p style="color: white; text-align: center;">20x10 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$300.00</h2>
+        <img src="images/peonies.jpg" class="modimage">
+        <form target="_blank" action="https://www.shop4artwork.com/store/p3526/Peonies_in_Vase_-_Acrylic_Painting_by_Debbie_Talman.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Artworks" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 30</div>
+        <h1 style="color: white; text-align: center; padding-left: 80px; padding-right: 80px;">Dragon Fly With Red Eyes</h1>
+        <p style="color: white; text-align: center;">10x10 acrylic on wrapped</p>
+        <h2 style="color: white; text-align: center;">$185.00</h2>
+        <img src="images/redeyes.jpg" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">7 / 30</div>
+        <h1 style="color: white; text-align: center;">Lich'aa</h1>
+        <p style="color: white; text-align: center;">20x10 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$300.00</h2>
+        <img src="images/lich.JPG" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">8 / 30</div>
+        <h1 style="color: white; text-align: center; padding-left: 80px; padding-right: 80px;">Bees In The Garden</h1>
+        <p style="color: white; text-align: center;">20x10 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$300.00</h2>
+        <img src="images/beesgarden.JPG" class="modimage">
+        <form target="_blank" action="https://www.shop4artwork.com/store/p3521/Bees_in_the_Garden_-_Acrylic_Painting_by_Debbie_Talman.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Artworks" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">9 / 30</div>
+        <h1 style="color: white; text-align: center;">Happy Fish</h1>
+        <p style="color: white; text-align: center;">7x19 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$150</h2>
+        <img src="images/happyframed.jpg" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">10 / 30</div>
+        <h1 style="color: white; text-align: center;">Save The Bees</h1>
+        <p style="color: white; text-align: center;">10x10 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$185.00</h2>
+        <img src="images/bees.jpg" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">11 / 30</div>
+        <h1 style="color: white; text-align: center;">Sunflowers</h1>
+        <p style="color: white; text-align: center;">30x40 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">SOLD</h2>
+        <img src="images/sunflowers.jpg" class="modimage">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">12 / 30</div>
+        <h1 style="color: white; text-align: center;">Lillies In Vase</h1>
+        <p style="color: white; text-align: center;">19x7 acrylic on wrapped canvas - Framed</p>
+        <h2 style="color: white; text-align: center;">$250</h2>
+        <img src="images/framedlillies.jpg" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">13 / 30</div>
+        <h1 style="color: white; text-align: center;">Discus Fish</h1>
+        <p style="color: white; text-align: center;">21x25 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">SOLD</h2>
+        <img src="images/discus.jpg" class="modimage">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">14 / 30</div>
+        <h1 style="color: white; text-align: center;">Jelly</h1>
+        <p style="color: white; text-align: center;">19x7 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">SOLD</h2>
+        <img src="images/jelly.jpg" class="modimage">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">15 / 30</div>
+        <h1 style="color: white; text-align: center;">Poppies In Vase</h1>
+        <p style="color: white; text-align: center;">19x7 acrylic on wrapped canvas - framed</p>
+        <h2 style="color: white; text-align: center;">$275.00</h2>
+        <img src="images/vase.jpg" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+      </div> 
+
+      <div class="mySlides">
+        <div class="numbertext">16 / 30</div>
+        <h1 style="color: white; text-align: center;">Blue Fish</h1>
+        <p style="color: white; text-align: center;">7x19 acrylic on wrapped canvas - framed</p>
+        <h2 style="color: white; text-align: center;">SOLD</h2>
+        <img src="images/blue.jpg" class="modimage">
+      </div>
+      
+      <div class="mySlides">
+        <div class="numbertext">17 / 30</div>
+        <h1 style="color: white; text-align: center;">Sunflower</h1>
+        <p style="color: white; text-align: center;">24x24 acrylic/mixed on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$750.00</h2>
+        <img src="images/sunflower.jpeg" class="modimage">
+        <form target="_blank" action="https://www.shop4artwork.com/store/p3528/Sunflower_-_Acrylic_Painting_by_Debbie_Talman.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Artworks" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">18 / 30</div>
+        <h1 style="color: white; text-align: center;">Marsh Dragonfly</h1>
+        <p style="color: white; text-align: center;">18x18 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$550.00</h2>
+        <img src="images/marsh.jpg" class="modimage">
+        <form target="_blank" action="https://www.shop4artwork.com/store/p3525/Marsh_Dragonfly_-_Acrylic_Painting_by_Debbie_Talman.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Artworks" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">19 / 30</div>
+        <h1 style="color: white; text-align: center;">Graffiti Fish</h1>
+        <p style="color: white; text-align: center;">24x24 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$750</h2>
+        <img src="images/graffiti.jpg" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">20 / 30</div>
+        <h1 style="color: white; text-align: center;">Fertility</h1>
+        <p style="color: white; text-align: center;">25x15 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$500.00</h2>
+        <img src="images/fertility.jpg" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">21 / 30</div>
+        <h1 style="color: white; text-align: center;">Poppies</h1>
+        <p style="color: white; text-align: center;">24x24 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$750.00</h2>
+        <img src="images/poppies.jpg" class="modimage">
+        <form target="_blank" action="https://www.shop4artwork.com/store/p3527/Poppies-_Acrylic_Painting_by_Debbie_Talman.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Artworks" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">22 / 30</div>
+        <h1 style="color: white; text-align: center; padding-left: 80px; padding-right: 80px;">Moth Before A Flame</h1>
+        <p style="color: white; text-align: center;">20x10 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$300.00</h2>
+        <img src="images/moth.jpg" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+      </div>  
+
+      <div class="mySlides">
+        <div class="numbertext">23 / 30</div>
+        <h1 style="color: white; text-align: center;">Follows Me</h1>
+        <p style="color: white; text-align: center;">20x10 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$300.00</h2>
+        <img src="images/follows.JPG" class="modimage">
+        <form target="_blank" action="https://www.shop4artwork.com/store/p3523/Follows_Me_-_Acrylic_Painting_by_Debbie_Talman.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Artworks" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">24 / 30</div>
+        <h1 style="color: white; text-align: center;">Grinning Grouper</h1>
+        <p style="color: white; text-align: center;">10x20 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$300.00</h2>
+        <img src="images/grouper.jpg" class="modimage">
+        <form target="_blank" action="https://www.shop4artwork.com/store/p3524/Grinning_Grouper_-_Acrylic_Painting_by_Debbie_Talman.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Artworks" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">25 / 30</div>
+        <h1 style="color: white; text-align: center; padding-left: 80px; padding-right: 80px;">Moroccan Tile And Dragonfly</h1>
+        <p style="color: white; text-align: center;">20x10 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$300.00</h2>
+        <img src="images/moroccan.jpg" class="modimage">
+        <form target="_blank" action="https://www.shop4artwork.com/store/p3522/Dragonfly_and_Moroccan_Tile_-_Acrylic_Painting_by_Debbie_Talman.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Artworks" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">26 / 30</div>
+        <h1 style="color: white; text-align: center;">Her Spirit</h1>
+        <p style="color: white; text-align: center;">20x10 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$300.00</h2>
+        <img src="images/spirit.jpg" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">27 / 30</div>
+        <h1 style="color: white; text-align: center;">Irises</h1>
+        <p style="color: white; text-align: center;">24x24 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$650</h2>
+        <img src="images/irises.jpeg" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">28 / 30</div>
+        <h1 style="color: white; text-align: center;">Freaky Fish</h1>
+        <p style="color: white; text-align: center;">10x20 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">$300</h2>
+        <img src="images/fish.jpg" class="modimage">
+        <form action="contact.html" style="width: 150px; margin-top: 15px;">
+          <input type="submit" class="buybutton" value="Buy From Debbie" />
+      </form>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">29 / 30</div>
+        <h1 style="color: white; text-align: center;">Dragonfly</h1>
+        <p style="color: white; text-align: center;">19x7 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">SOLD</h2>
+        <img src="images/dragonfly.jpg" class="modimage">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">30 / 30</div>
+        <h1 style="color: white; text-align: center;">Flamingo</h1>
+        <p style="color: white; text-align: center;">19x7 acrylic on wrapped canvas</p>
+        <h2 style="color: white; text-align: center;">SOLD</h2>
+        <img src="images/flamingo.jpg" class="modimage">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  		</div>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+
+
+  		<!-- display as selections in modal
+      <div class="columnModal">
+        <img class="demo cursor modalThumb" src="images/discus.jpg"
+  					onclick="currentSlide(1)" alt="Nature and sunrise">
+      </div>
+      <div class="columnModal">
+        <img class="demo cursor modalThumb" src="images/jelly.jpg"
+  					onclick="currentSlide(2)" alt="Snow">
+      </div>
+      <div class="columnModal">
+        <img class="demo cursor modalThumb" src="images/vase.jpg"
+  					onclick="currentSlide(3)" alt="Mountains and fjords">
+      </div>
+      <div class="columnModal">
+        <img class="demo cursor modalThumb" src="images/blue.jpg"
+  					onclick="currentSlide(4)" alt="Northern Lights">
+      </div>
+  		<div class="columnModal">
+        <img class="demo cursor modalThumb" src="images/fish.jpg"
+  					onclick="currentSlide(5)" alt="Nature and sunrise">
+      </div>
+      <div class="columnModal">
+        <img class="demo cursor modalThumb" src="images/dragonfly.jpg"
+  					onclick="currentSlide(6)" alt="Snow">
+      </div>
+      <div class="columnModal">
+        <img class="demo cursor modalThumb" src="images/flamingo.jpg"
+  					onclick="currentSlide(7)" alt="Mountains and fjords">
+      </div>
+      <div class="columnModal">
+        <img class="demo cursor modalThumb" src="images/flowers.jpg"
+  					onclick="currentSlide(8)" alt="Northern Lights">
+      </div>-->
+    </div>
+  </div>
+  <!--End html code for modal placement-->
+
+  <!--Script for the modal*-->
+  <script>
+  	function openModal() {
+    	document.getElementById("myModal").style.display = "block";
+  	}
+
+  	function closeModal() {
+    	document.getElementById("myModal").style.display = "none";
+  	}
+
+  	var slideIndex = 1;
+  	showSlides(slideIndex);
+
+  	function plusSlides(n) {
+    	showSlides(slideIndex += n);
+  	}
+
+  	function currentSlide(n) {
+    	showSlides(slideIndex = n);
+  	}
+
+  	function showSlides(n) {
+    	var i;
+    	var slides = document.getElementsByClassName("mySlides");
+    	var dots = document.getElementsByClassName("demo");
+    	var captionText = document.getElementById("caption");
+    	if (n > slides.length) {slideIndex = 1}
+    	if (n < 1) {slideIndex = slides.length}
+    	for (i = 0; i < slides.length; i++) {
+        	slides[i].style.display = "none";
+    	}
+    	for (i = 0; i < dots.length; i++) {
+        	dots[i].className = dots[i].className.replace(" active", "");
+    	}
+    	slides[slideIndex-1].style.display = "block";
+    	dots[slideIndex-1].className += " active";
+    	captionText.innerHTML = dots[slideIndex-1].alt;
+  	}
+  </script>
+
+
+
+
+</body>
+
+</html>
