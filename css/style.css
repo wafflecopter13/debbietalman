@@ -302,7 +302,7 @@ cursor: pointer;
 }
 
 /*RESPONSIVE*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
     #main-menu {
       display: none;
     }
@@ -633,7 +633,7 @@ cursor: pointer;
         }
     /* End css for modal*/
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 900px) {
           /* Begin css for my created main page content*/
           .encompass{
             padding-left: 50px;
