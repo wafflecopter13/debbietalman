@@ -331,6 +331,9 @@ cursor: pointer;
   h1{
     font-size: 36px;
   }
+  .icon{
+    width: 30px;
+}
 }
 
 /* Begin css for my created main page content*/
@@ -388,6 +391,7 @@ cursor: pointer;
       padding: 6px;
       padding-left: 15%;
       padding-right: 15%;
+      padding-top: 30px;;
     }
 
 
@@ -638,6 +642,7 @@ cursor: pointer;
           .encompass{
             padding-left: 50px;
             padding-right: 50px;
+            padding-top: 100px;
           }
 
           .choose {
